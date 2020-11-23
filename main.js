@@ -67,7 +67,7 @@ function main() {
   var model = glMatrix.mat4.create();
   var view = glMatrix.mat4.create();
   glMatrix.mat4.lookAt(view,
-    [0.0, 0.0, 0.0], // di mana posisi kamera (posisi)
+    [0.0, 0.0, 2.0], // di mana posisi kamera (posisi)
     [0.0, 0.0, -2.0], // ke mana kamera menghadap (vektor)
     [0.0, 1.0, 0.0] // ke mana arah atas kamera (vektor)
     );

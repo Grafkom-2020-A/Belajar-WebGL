@@ -115,6 +115,8 @@ function main() {
   var uProjection = gl.getUniformLocation(shaderProgram, 'projection');
 
   function render() {
+    var theta = glMatrix.glMatrix.toRadian(1); // 1 derajat
+    glMatrix.mat4.rotate(model, model, theta, [1.0, 1.0, 1.0]);
     gl.uniformMatrix4fv(uModel, false, model);
     gl.uniformMatrix4fv(uView, false, view);
     gl.uniformMatrix4fv(uProjection, false, projection);
